@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Logger,
   Post,
   Req,
   UseGuards,
@@ -12,6 +13,7 @@ import { AuthCredentialsDto } from './dto/auth-credentials.dto';
 
 @Controller('auth')
 export class AuthController {
+
   constructor(private authService: AuthService) {}
 
   @Post('/signup')
